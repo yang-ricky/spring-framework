@@ -551,7 +551,7 @@ class CronTriggerTests {
 	void testNonExistentSpecificDate(LocalDateTime localDateTime, TimeZone timeZone) {
 		setUp(localDateTime, timeZone);
 
-		// TODO: maybe try and detect this as a special case in parser?
+		// RickyDelete: maybe try and detect this as a special case in parser?
 		CronTrigger trigger = new CronTrigger("0 0 0 31 6 *", timeZone);
 		this.calendar.set(Calendar.DAY_OF_MONTH, 10);
 		this.calendar.set(Calendar.MONTH, 2);

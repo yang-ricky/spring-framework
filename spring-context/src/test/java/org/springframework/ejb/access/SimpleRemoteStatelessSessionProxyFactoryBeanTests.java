@@ -131,7 +131,7 @@ public class SimpleRemoteStatelessSessionProxyFactoryBeanTests extends SimpleRem
 
 		MyEjb myEjb = mock(MyEjb.class);
 		given(myEjb.getValue()).willThrow(rex);
-		// TODO might want to control this behaviour...
+		// RickyDelete might want to control this behaviour...
 		// Do we really want to call remove after a remote exception?
 
 		final MyHome home = mock(MyHome.class);

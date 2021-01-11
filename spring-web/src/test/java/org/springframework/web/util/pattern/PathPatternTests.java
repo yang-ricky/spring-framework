@@ -882,7 +882,7 @@ public class PathPatternTests {
 		assertThat(pathMatcher.combine("/*.html", "/hotel.html")).isEqualTo("/hotel.html");
 		assertThat(pathMatcher.combine("/*.html", "/hotel")).isEqualTo("/hotel.html");
 		assertThat(pathMatcher.combine("/*.html", "/hotel.*")).isEqualTo("/hotel.html");
-		// TODO this seems rather bogus, should we eagerly show an error?
+		// RickyDelete this seems rather bogus, should we eagerly show an error?
 		assertThat(pathMatcher.combine("/a/b/c/*.html", "/d/e/f/hotel.*")).isEqualTo("/d/e/f/hotel.html");
 		assertThat(pathMatcher.combine("/**", "/*.html")).isEqualTo("/*.html");
 		assertThat(pathMatcher.combine("/*", "/*.html")).isEqualTo("/*.html");
@@ -901,7 +901,7 @@ public class PathPatternTests {
 		assertThat(pathMatcher.combine("/hotel/", "/booking")).isEqualTo("/hotel/booking");
 		assertThat(pathMatcher.combine("", "/hotel")).isEqualTo("/hotel");
 		assertThat(pathMatcher.combine("/hotel", "")).isEqualTo("/hotel");
-		// TODO Do we need special handling when patterns contain multiple dots?
+		// RickyDelete Do we need special handling when patterns contain multiple dots?
 	}
 
 	@Test
@@ -942,7 +942,7 @@ public class PathPatternTests {
 		assertThat(comparator.compare(parse("/hotels/*"), parse("/hotels/*/**"))).isEqualTo(-1);
 		assertThat(comparator.compare(parse("/hotels/*/**"), parse("/hotels/*"))).isEqualTo(1);
 
-// TODO: shouldn't the wildcard lower the score?
+// RickyDelete: shouldn't the wildcard lower the score?
 //		assertEquals(-1,
 //				comparator.compare(parse("/hotels/new"), parse("/hotels/new.*")));
 

@@ -164,7 +164,7 @@ class MultipartIntegrationTests extends AbstractHttpHandlerIntegrationTests {
 
 	@ParameterizedHttpServerTest
 	void transferTo(HttpServer httpServer) throws Exception {
-		// TODO: check why Undertow fails
+		// RickyDelete: check why Undertow fails
 		if (httpServer instanceof UndertowHttpServer) {
 			return;
 		}

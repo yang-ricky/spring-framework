@@ -59,7 +59,7 @@ public class InMemoryWebSessionStoreTests {
 		assertThat(session.isStarted()).isTrue();
 	}
 
-	@Disabled // TODO: remove if/when Blockhound is enabled
+	@Disabled // RickyDelete: remove if/when Blockhound is enabled
 	@Test // gh-24027
 	public void createSessionDoesNotBlock() {
 		Mono.defer(() -> this.store.createWebSession())

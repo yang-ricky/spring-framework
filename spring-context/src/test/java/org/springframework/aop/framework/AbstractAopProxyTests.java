@@ -693,11 +693,11 @@ public abstract class AbstractAopProxyTests {
 		ProxyFactory pc = new ProxyFactory(target);
 		pc.addAdvisor(new DefaultIntroductionAdvisor(new DummyIntroductionAdviceImpl(), Comparable.class));
 		assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
-			// TODO May fail on either call: may want to tighten up definition
+			// RickyDelete May fail on either call: may want to tighten up definition
 			ITestBean proxied = (ITestBean) createProxy(pc);
 			proxied.getName();
 		});
-		// TODO used to catch UnknownAdviceTypeException, but
+		// RickyDelete used to catch UnknownAdviceTypeException, but
 		// with CGLIB some errors are in proxy creation and are wrapped
 		// in aspect exception. Error message is still fine.
 		//assertTrue(ex.getMessage().indexOf("ntroduction") > -1);
@@ -1750,7 +1750,7 @@ public abstract class AbstractAopProxyTests {
 
 		@Override
 		protected void checkAdvised(Advised advised) {
-			// TODO replace this check: no longer possible
+			// RickyDelete replace this check: no longer possible
 			//assertEquals(advised.getTarget(), this);
 		}
 	}

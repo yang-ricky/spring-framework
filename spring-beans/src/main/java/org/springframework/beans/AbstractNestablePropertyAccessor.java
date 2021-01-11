@@ -890,7 +890,7 @@ public abstract class AbstractNestablePropertyAccessor extends AbstractPropertyA
 		try {
 			if (type.isArray()) {
 				Class<?> componentType = type.getComponentType();
-				// TODO - only handles 2-dimensional arrays
+				// RickyDelete - only handles 2-dimensional arrays
 				if (componentType.isArray()) {
 					Object array = Array.newInstance(componentType, 1);
 					Array.set(array, 0, Array.newInstance(componentType.getComponentType(), 0));

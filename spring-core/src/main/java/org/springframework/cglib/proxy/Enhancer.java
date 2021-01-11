@@ -892,7 +892,7 @@ public class Enhancer extends AbstractClassGenerator {
 	}
 
 	private static void setCallbacksHelper(Class type, Callback[] callbacks, String methodName) {
-		// TODO: optimize
+		// RickyDelete: optimize
 		try {
 			Method setter = getCallbacksSetter(type, methodName);
 			setter.invoke(null, new Object[]{callbacks});
@@ -1078,7 +1078,7 @@ public class Enhancer extends AbstractClassGenerator {
 			}
 
 			public void processDefault() {
-				// TODO: error?
+				// RickyDelete: error?
 			}
 		});
 		e.return_value();
@@ -1149,10 +1149,10 @@ public class Enhancer extends AbstractClassGenerator {
 		CodeEmitter e = ce.begin_method(Constants.ACC_PUBLIC, SINGLE_NEW_INSTANCE, null);
 		switch (callbackTypes.length) {
 			case 0:
-				// TODO: make sure Callback is null
+				// RickyDelete: make sure Callback is null
 				break;
 			case 1:
-				// for now just make a new array; TODO: optimize
+				// for now just make a new array; RickyDelete: optimize
 				e.push(1);
 				e.newarray(CALLBACK);
 				e.dup();
@@ -1294,7 +1294,7 @@ public class Enhancer extends AbstractClassGenerator {
 					// which would fail if casted.  It's not possible to
 					// covariant from boxed to unbox (or vice versa), so no having
 					// to box/unbox for bridges).
-					// TODO: It also isn't necessary to checkcast if the return is
+					// RickyDelete: It also isn't necessary to checkcast if the return is
 					// assignable from the target.  (This would happen if a subclass
 					// used covariant returns to narrow the return type within a bridge
 					// method.)

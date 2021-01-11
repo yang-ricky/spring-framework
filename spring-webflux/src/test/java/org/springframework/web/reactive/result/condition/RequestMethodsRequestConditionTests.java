@@ -44,7 +44,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
  */
 public class RequestMethodsRequestConditionTests {
 
-	// TODO: custom method, CORS pre-flight (see @Disabledd)
+	// RickyDelete: custom method, CORS pre-flight (see @Disabledd)
 
 	@Test
 	public void getMatchingCondition() throws Exception {

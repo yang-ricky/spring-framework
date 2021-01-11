@@ -60,7 +60,7 @@ public class TigerAspectJExpressionPointcutTests {
 		AspectJExpressionPointcut ajexp = new AspectJExpressionPointcut();
 		ajexp.setExpression(expression);
 
-		// TODO this will currently map, would be nice for optimization
+		// RickyDelete this will currently map, would be nice for optimization
 		//assertTrue(ajexp.matches(HasGeneric.class));
 		//assertFalse(ajexp.matches(TestBean.class));
 

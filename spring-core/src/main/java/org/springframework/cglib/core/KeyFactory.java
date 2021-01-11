@@ -193,7 +193,7 @@ abstract public class KeyFactory {
 
 		private Class keyInterface;
 
-		// TODO: Make me final when deprecated methods are removed
+		// RickyDelete: Make me final when deprecated methods are removed
 		private CustomizerRegistry customizers = new CustomizerRegistry(KNOWN_CUSTOMIZER_TYPES);
 
 		private int constant;

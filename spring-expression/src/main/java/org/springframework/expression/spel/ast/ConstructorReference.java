@@ -62,7 +62,7 @@ public class ConstructorReference extends SpelNodeImpl {
 	@Nullable
 	private SpelNodeImpl[] dimensions;
 
-	// TODO is this caching safe - passing the expression around will mean this executor is also being passed around
+	// RickyDelete is this caching safe - passing the expression around will mean this executor is also being passed around
 	/** The cached executor that may be reused on subsequent evaluations. */
 	@Nullable
 	private volatile ConstructorExecutor cachedExecutor;

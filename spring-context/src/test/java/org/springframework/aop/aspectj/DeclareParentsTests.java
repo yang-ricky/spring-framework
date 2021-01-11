@@ -55,7 +55,7 @@ public class DeclareParentsTests {
 		assertThat(condition).as("Introduction must have been made").isTrue();
 	}
 
-	// TODO if you change type pattern from org.springframework.beans..*
+	// RickyDelete if you change type pattern from org.springframework.beans..*
 	// to org.springframework..* it also matches introduction.
 	// Perhaps generated advisor bean definition could be made to depend
 	// on the introduction, in which case this would not be a problem.

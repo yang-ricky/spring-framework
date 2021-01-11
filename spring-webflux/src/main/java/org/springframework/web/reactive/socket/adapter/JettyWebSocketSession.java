@@ -57,7 +57,7 @@ public class JettyWebSocketSession extends AbstractListenerWebSocketSession<Sess
 			@Nullable Sinks.Empty<Void> completionSink) {
 
 		super(session, ObjectUtils.getIdentityHexString(session), info, factory, completionSink);
-		// TODO: suspend causes failures if invoked at this stage
+		// RickyDelete: suspend causes failures if invoked at this stage
 		// suspendReceiving();
 	}
 

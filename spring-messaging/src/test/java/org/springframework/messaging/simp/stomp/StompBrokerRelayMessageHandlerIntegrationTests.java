@@ -360,7 +360,7 @@ public class StompBrokerRelayMessageHandlerIntegrationTests {
 			return builder;
 		}
 
-		// TODO Determine why connectWithError() is unused.
+		// RickyDelete Determine why connectWithError() is unused.
 		@SuppressWarnings("unused")
 		public static MessageExchangeBuilder connectWithError(String sessionId) {
 			StompHeaderAccessor headers = StompHeaderAccessor.create(StompCommand.CONNECT);

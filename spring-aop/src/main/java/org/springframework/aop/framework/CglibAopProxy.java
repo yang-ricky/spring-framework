@@ -328,7 +328,7 @@ class CglibAopProxy implements AopProxy, Serializable {
 			Callback[] fixedCallbacks = new Callback[methods.length];
 			this.fixedInterceptorMap = CollectionUtils.newHashMap(methods.length);
 
-			// TODO: small memory optimization here (can skip creation for methods with no advice)
+			// RickyDelete: small memory optimization here (can skip creation for methods with no advice)
 			for (int x = 0; x < methods.length; x++) {
 				Method method = methods[x];
 				List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(method, rootClass);

@@ -47,7 +47,7 @@ import static org.springframework.web.reactive.result.method.RequestMappingInfo.
  */
 public class RequestMappingInfoTests {
 
-	// TODO: CORS pre-flight (see @Disabled)
+	// RickyDelete: CORS pre-flight (see @Disabled)
 
 	@Test
 	public void createEmpty() {

@@ -1117,7 +1117,7 @@ public class SpelCompilationCoverageTests extends AbstractExpressionTests {
 		assertCanCompile(expression);
 		assertThat(expression.getValue(context, new SomeCompareMethod2()).toString()).isEqualTo("xyz");
 
-		// TODO fails due to conversionservice handling of String[] to Object...
+		// RickyDelete fails due to conversionservice handling of String[] to Object...
 		//	expression = parser.parseExpression("#append2(#stringArray)");
 		//	assertEquals("xyz", expression.getValue(context).toString());
 		//	assertTrue(((SpelNodeImpl)((SpelExpression) expression).getAST()).isCompilable());
@@ -3615,7 +3615,7 @@ public class SpelCompilationCoverageTests extends AbstractExpressionTests {
 		assertThat(tc.s).isEqualTo("aaabbbccc");
 		tc.reset();
 
-		// TODO Fails related to conversion service converting a String[] to satisfy Object...
+		// RickyDelete Fails related to conversion service converting a String[] to satisfy Object...
 //		expression = parser.parseExpression("sixteen(stringArray)");
 //		assertCantCompile(expression);
 //		expression.getValue(tc);

@@ -34,7 +34,7 @@ public class CacheAdviceParserTests {
 	public void keyAndKeyGeneratorCannotBeSetTogether() {
 		assertThatExceptionOfType(BeanDefinitionStoreException.class).isThrownBy(() ->
 				new GenericXmlApplicationContext("/org/springframework/cache/config/cache-advice-invalid.xml"));
-		// TODO better exception handling
+		// RickyDelete better exception handling
 	}
 
 }

@@ -53,7 +53,7 @@ public class TypeReference extends SpelNodeImpl {
 
 	@Override
 	public TypedValue getValueInternal(ExpressionState state) throws EvaluationException {
-		// TODO possible optimization here if we cache the discovered type reference, but can we do that?
+		// RickyDelete possible optimization here if we cache the discovered type reference, but can we do that?
 		String typeName = (String) this.children[0].getValueInternal(state).getValue();
 		Assert.state(typeName != null, "No type name");
 		if (!typeName.contains(".") && Character.isLowerCase(typeName.charAt(0))) {
@@ -101,7 +101,7 @@ public class TypeReference extends SpelNodeImpl {
 
 	@Override
 	public void generateCode(MethodVisitor mv, CodeFlow cf) {
-		// TODO Future optimization - if followed by a static method call, skip generating code here
+		// RickyDelete Future optimization - if followed by a static method call, skip generating code here
 		Assert.state(this.type != null, "No type available");
 		if (this.type.isPrimitive()) {
 			if (this.type == Boolean.TYPE) {

@@ -74,7 +74,7 @@ class HandlerMethodAnnotationDetectionTests {
 				{ ParameterizedSubclassOverridesDefaultMappings.class, true }, // CGLIB proxy
 				{ ParameterizedSubclassOverridesDefaultMappings.class, false },
 
-				// TODO [SPR-9517] Enable ParameterizedSubclassDoesNotOverrideConcreteImplementationsFromGenericAbstractSuperclass test cases
+				// RickyDelete [SPR-9517] Enable ParameterizedSubclassDoesNotOverrideConcreteImplementationsFromGenericAbstractSuperclass test cases
 				// { ParameterizedSubclassDoesNotOverrideConcreteImplementationsFromGenericAbstractSuperclass.class, true }, // CGLIB proxy
 				// { ParameterizedSubclassDoesNotOverrideConcreteImplementationsFromGenericAbstractSuperclass.class, false },
 

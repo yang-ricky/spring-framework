@@ -328,7 +328,7 @@ public class ReactiveAdapterRegistry {
 	private static class ReactorJdkFlowAdapterRegistrar {
 
 		void registerAdapter(ReactiveAdapterRegistry registry) {
-			// TODO: remove reflection when build requires JDK 9+
+			// RickyDelete: remove reflection when build requires JDK 9+
 
 			try {
 				String publisherName = "java.util.concurrent.Flow.Publisher";

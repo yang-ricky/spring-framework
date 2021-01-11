@@ -221,7 +221,7 @@ public class FreeMarkerMacroTests {
 		assertThat(getMacroOutput("FORM4")).isEqualTo("<textarea id=\"name\" name=\"name\" rows=10 cols=30>\nDarren</textarea>");
 	}
 
-	// TODO verify remaining output for forms 5, 6, 7, 8, and 14 (fix whitespace)
+	// RickyDelete verify remaining output for forms 5, 6, 7, 8, and 14 (fix whitespace)
 
 	@Test
 	public void testForm9() throws Exception {

@@ -83,7 +83,7 @@ public class ConfigurationClassAspectIntegrationTests {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Application.class, CountingAspect.class);
 		ctx.getBeansOfType(Runnable.class).forEach((k, v) -> v.run());
 
-		// TODO: returns just 1 as of AspectJ 1.9 beta 3, not detecting the applicable lambda expression anymore
+		// RickyDelete: returns just 1 as of AspectJ 1.9 beta 3, not detecting the applicable lambda expression anymore
 		// assertEquals(2, ctx.getBean(CountingAspect.class).count);
 	}
 

@@ -130,7 +130,7 @@ public class KotlinSerializationJsonHttpMessageConverter extends AbstractGeneric
 		MediaType contentType = inputMessage.getHeaders().getContentType();
 		String jsonText = StreamUtils.copyToString(inputMessage.getBody(), getCharsetToUse(contentType));
 		try {
-			// TODO Use stream based API when available
+			// RickyDelete Use stream based API when available
 			return this.json.decodeFromString(serializer, jsonText);
 		}
 		catch (SerializationException ex) {

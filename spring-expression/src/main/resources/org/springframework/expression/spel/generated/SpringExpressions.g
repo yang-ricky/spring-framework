@@ -124,7 +124,7 @@ methodOrProperty
 	
 // may have to preserve these commas to make it easier to offer suggestions in the right place
 // mod at 9th feb 19:13 - added the second 'COMMA?' to allow for code completion "foo(A,"
-// TODO need to preserve commas and then check for badly formed call later (optimizing tree walk) to disallow "foo(a,b,c,)"
+// RickyDelete need to preserve commas and then check for badly formed call later (optimizing tree walk) to disallow "foo(a,b,c,)"
 methodArgs :  LPAREN! (argument (COMMA! argument)* (COMMA!)?)? RPAREN!;
 
 // If we match ID then create a node called PROPERTY_OR_FIELD and copy the id info into it.
@@ -136,7 +136,7 @@ property: id=ID -> ^(PROPERTY_OR_FIELD[$id]);
 indexer: LBRACKET r1=argument (COMMA r2=argument)* RBRACKET -> ^(INDEXER $r1 ($r2)*);
 	
 // argument;
-	// TODO make expression conditional with ? if want completion for when the RCURLY is missing
+	// RickyDelete make expression conditional with ? if want completion for when the RCURLY is missing
 projection: PROJECT^ expression RBRACKET!;
 
 selection: SELECT^ expression RBRACKET!;
@@ -145,7 +145,7 @@ firstSelection:	SELECT_FIRST^ expression RBRACKET!;
 
 lastSelection: SELECT_LAST^ expression RBRACKET!;
 
-// TODO cope with array types
+// RickyDelete cope with array types
 type:	TYPE qualifiedId RPAREN -> ^(TYPEREF qualifiedId);
 //type:   TYPE tn=qualifiedId (LBRACKET RBRACKET)? (COMMA qid=qualifiedId)? RPAREN
 

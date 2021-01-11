@@ -177,7 +177,7 @@ public class BeanFactoryTransactionTests {
 		};
 		PlatformTransactionManagerFacade.delegate = ptm;
 
-		// TODO same as old age to avoid ordering effect for now
+		// RickyDelete same as old age to avoid ordering effect for now
 		int age = 666;
 		testBean.setAge(age);
 		assertThat(testBean.getAge() == age).isTrue();

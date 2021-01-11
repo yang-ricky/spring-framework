@@ -86,7 +86,7 @@ class BeanFactoryTypeConverter implements TypeConverter, BeanFactoryAware {
 		if (conversionService.canConvert(sourceTypeDescriptor, targetTypeDescriptor)) {
 			return true;
 		}
-		// TODO: what does this mean? This method is not used in SpEL so probably ignorable?
+		// RickyDelete: what does this mean? This method is not used in SpEL so probably ignorable?
 		Class<?> sourceType = sourceTypeDescriptor.getObjectType();
 		Class<?> targetType = targetTypeDescriptor.getObjectType();
 		return canConvert(sourceType, targetType);

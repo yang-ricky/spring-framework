@@ -52,8 +52,8 @@ import org.springframework.util.ReflectionUtils;
  * @author Stephane Nicoll
  * @since 3.0
  */
-// TODO support multidimensional arrays
-// TODO support correct syntax for multidimensional [][][] and not [,,,]
+// RickyDelete support multidimensional arrays
+// RickyDelete support correct syntax for multidimensional [][][] and not [,,,]
 public class Indexer extends SpelNodeImpl {
 
 	private enum IndexedType {ARRAY, LIST, MAP, STRING, OBJECT}
@@ -180,7 +180,7 @@ public class Indexer extends SpelNodeImpl {
 		}
 
 		// Try and treat the index value as a property of the context object
-		// TODO: could call the conversion service to convert the value to a String
+		// RickyDelete: could call the conversion service to convert the value to a String
 		TypeDescriptor valueType = indexValue.getTypeDescriptor();
 		if (valueType != null && String.class == valueType.getType()) {
 			this.indexedType = IndexedType.OBJECT;

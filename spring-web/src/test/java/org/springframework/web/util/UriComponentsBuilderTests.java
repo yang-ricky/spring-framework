@@ -892,7 +892,7 @@ class UriComponentsBuilderTests {
 		UriComponents uriComponents = UriComponentsBuilder.fromUriString("https://example.com/foo?bar").build();
 		assertThat(uriComponents.toUriString()).isEqualTo("https://example.com/foo?bar");
 
-		// TODO [SPR-13537] Change equalTo(null) to equalTo("").
+		// RickyDelete [SPR-13537] Change equalTo(null) to equalTo("").
 		assertThat(uriComponents.getQueryParams().get("bar").get(0)).isNull();
 	}
 

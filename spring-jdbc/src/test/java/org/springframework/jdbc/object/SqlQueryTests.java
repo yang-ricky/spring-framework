@@ -56,7 +56,7 @@ import static org.mockito.Mockito.verify;
  */
 public class SqlQueryTests  {
 
-	//FIXME inline?
+	//fix inline?
 	private static final String SELECT_ID =
 			"select id from custmr";
 	private static final String SELECT_ID_WHERE =
