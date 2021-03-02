@@ -41,9 +41,7 @@ enum IntrospectionFailureLogger {
 		public void log(String message) {
 			getLogger().debug(message);
 		}
-	},
-
-	INFO {
+	}, INFO {
 		@Override
 		public boolean isEnabled() {
 			return getLogger().isInfoEnabled();

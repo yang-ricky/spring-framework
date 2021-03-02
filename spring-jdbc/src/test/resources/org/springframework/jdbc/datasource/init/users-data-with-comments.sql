@@ -6,7 +6,6 @@
 INSERT INTO users(first_name, last_name) VALUES('Juergen', 'Hoeller');
 -- This is also a comment.
 INSERT INTO
-users(first_name, last_name)
-VALUES( 'Sam'     -- first_name
+users(first_name, last_name) VALUES( 'Sam'     -- first_name
       , 'Brannen' -- last_name
 );--

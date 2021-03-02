@@ -113,12 +113,12 @@ public class CustomBooleanEditor extends PropertyEditorSupport {
 	 * for example, "false" (VALUE_FALSE), "off" (VALUE_OFF),
 	 * "no" (VALUE_NO) or some custom value
 	 * @param allowEmpty if empty strings should be allowed
-	 * @see #VALUE_TRUE
-	 * @see #VALUE_FALSE
-	 * @see #VALUE_ON
-	 * @see #VALUE_OFF
-	 * @see #VALUE_YES
-	 * @see #VALUE_NO
+	 * @see #RICKYVALUE_TRUE
+	 * @see #RICKYVALUE_FALSE
+	 * @see #RICKYVALUE_ON
+	 * @see #RICKYVALUE_OFF
+	 * @see #RICKYVALUE_YES
+	 * @see #RICKYVALUE_NO
 	 */
 	public CustomBooleanEditor(@Nullable String trueString, @Nullable String falseString, boolean allowEmpty) {
 		this.trueString = trueString;
@@ -141,13 +141,11 @@ public class CustomBooleanEditor extends PropertyEditorSupport {
 			setValue(Boolean.FALSE);
 		}
 		else if (this.trueString == null &&
-				(VALUE_TRUE.equalsIgnoreCase(input) || VALUE_ON.equalsIgnoreCase(input) ||
-						VALUE_YES.equalsIgnoreCase(input) || VALUE_1.equals(input))) {
+				(VALUE_TRUE.equalsIgnoreCase(input) || VALUE_ON.equalsIgnoreCase(input) || VALUE_YES.equalsIgnoreCase(input) || VALUE_1.equals(input))) {
 			setValue(Boolean.TRUE);
 		}
 		else if (this.falseString == null &&
-				(VALUE_FALSE.equalsIgnoreCase(input) || VALUE_OFF.equalsIgnoreCase(input) ||
-						VALUE_NO.equalsIgnoreCase(input) || VALUE_0.equals(input))) {
+				(VALUE_FALSE.equalsIgnoreCase(input) || VALUE_OFF.equalsIgnoreCase(input) || VALUE_NO.equalsIgnoreCase(input) || VALUE_0.equals(input))) {
 			setValue(Boolean.FALSE);
 		}
 		else {

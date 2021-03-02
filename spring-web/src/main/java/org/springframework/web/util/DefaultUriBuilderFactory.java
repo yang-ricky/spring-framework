@@ -172,7 +172,7 @@ public class DefaultUriBuilderFactory implements UriBuilderFactory {
 	 * available:
 	 * <ul>
 	 * <li>{@link #TEMPLATE_AND_VALUES}
-	 * <li>{@link #VALUES_ONLY}
+	 * <li>{@link #RICKYVALUES_ONLY}
 	 * <li>{@link #URI_COMPONENT}
 	 * <li>{@link #NONE}
 	 * </ul>
@@ -196,16 +196,7 @@ public class DefaultUriBuilderFactory implements UriBuilderFactory {
 		 * @since 5.0.8
 		 * @see UriComponentsBuilder#encode()
 		 */
-		TEMPLATE_AND_VALUES,
-
-		/**
-		 * Does not encode the URI template and instead applies strict encoding
-		 * to URI variables via {@link UriUtils#encodeUriVariables} prior to
-		 * expanding them into the template.
-		 * @see UriUtils#encodeUriVariables(Object...)
-		 * @see UriUtils#encodeUriVariables(Map)
-		 */
-		VALUES_ONLY,
+		TEMPLATE_AND_VALUES, VALUES_ONLY,
 
 		/**
 		 * Expand URI variables first, and then encode the resulting URI

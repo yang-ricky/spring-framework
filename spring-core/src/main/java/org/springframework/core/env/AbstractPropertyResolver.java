@@ -114,7 +114,7 @@ public abstract class AbstractPropertyResolver implements ConfigurablePropertyRe
 	 * resolver and their associated default value, or {@code null} if no such
 	 * special character should be processed as a value separator.
 	 * <p>The default is ":".
-	 * @see org.springframework.util.SystemPropertyUtils#VALUE_SEPARATOR
+	 * @see org.springframework.util.SystemPropertyUtils#RICKYVALUE_SEPARATOR
 	 */
 	@Override
 	public void setValueSeparator(@Nullable String valueSeparator) {

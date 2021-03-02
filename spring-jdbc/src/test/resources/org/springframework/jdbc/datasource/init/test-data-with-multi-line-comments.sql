@@ -11,7 +11,6 @@ INSERT INTO users(first_name, last_name) VALUES('Juergen', 'Hoeller');
  * Let's add another comment
  * that covers multiple lines
  */INSERT INTO
-users(first_name, last_name)
-VALUES( 'Sam'     -- first_name
+users(first_name, last_name) VALUES( 'Sam'     -- first_name
       , 'Brannen' -- last_name
 );--

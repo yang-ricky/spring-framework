@@ -9,9 +9,7 @@ INSERT
 
 INTO
 
-user
-
-VALUES('Dilbert')
+user VALUES('Dilbert')
 
 @@
 

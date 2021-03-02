@@ -45,9 +45,7 @@ public enum Database {
 	/** @since 5.1 */
 	HANA,
 
-	HSQL,
-
-	INFORMIX,
+	HSQL, INFORMIX,
 
 	MYSQL,
 

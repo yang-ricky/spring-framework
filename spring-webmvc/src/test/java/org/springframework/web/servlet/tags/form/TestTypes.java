@@ -37,9 +37,7 @@ class BeanWithEnum {
 
 }
 
-enum TestEnum {
-
-	VALUE_1, VALUE_2;
+enum TestEnum { VALUE_1, VALUE_2;
 
 	public String getEnumLabel() {
 		return "Label: " + name();

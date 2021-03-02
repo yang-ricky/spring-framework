@@ -43,7 +43,7 @@ import org.springframework.util.StringUtils;
  * General purpose factory loading mechanism for internal use within the framework.
  *
  * <p>{@code SpringFactoriesLoader} {@linkplain #loadFactories loads} and instantiates
- * factories of a given type from {@value #FACTORIES_RESOURCE_LOCATION} files which
+ * factories of a given type from {@value #RICKYFACTORIES_RESOURCE_LOCATION} files which
  * may be present in multiple JAR files in the classpath. The {@code spring.factories}
  * file must be in {@link Properties} format, where the key is the fully qualified
  * name of the interface or abstract class, and the value is a comma-separated list of
@@ -79,7 +79,7 @@ public final class SpringFactoriesLoader {
 
 	/**
 	 * Load and instantiate the factory implementations of the given type from
-	 * {@value #FACTORIES_RESOURCE_LOCATION}, using the given class loader.
+	 * {@value #RICKYFACTORIES_RESOURCE_LOCATION}, using the given class loader.
 	 * <p>The returned factories are sorted through {@link AnnotationAwareOrderComparator}.
 	 * <p>If a custom instantiation strategy is required, use {@link #loadFactoryNames}
 	 * to obtain all registered factory names.
@@ -112,7 +112,7 @@ public final class SpringFactoriesLoader {
 
 	/**
 	 * Load the fully qualified class names of factory implementations of the
-	 * given type from {@value #FACTORIES_RESOURCE_LOCATION}, using the given
+	 * given type from {@value #RICKYFACTORIES_RESOURCE_LOCATION}, using the given
 	 * class loader.
 	 * <p>As of Spring Framework 5.3, if a particular implementation class name
 	 * is discovered more than once for the given factory type, duplicates will
@@ -162,8 +162,7 @@ public final class SpringFactoriesLoader {
 			cache.put(classLoader, result);
 		}
 		catch (IOException ex) {
-			throw new IllegalArgumentException("Unable to load factories from location [" +
-					FACTORIES_RESOURCE_LOCATION + "]", ex);
+			throw new IllegalArgumentException("Unable to load factories from location [" + FACTORIES_RESOURCE_LOCATION + "]", ex);
 		}
 		return result;
 	}

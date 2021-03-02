@@ -591,7 +591,7 @@ public class ClassWriter extends ClassVisitor {
       attributesCount += firstAttribute.getAttributeCount();
       size += firstAttribute.computeAttributesSize(symbolTable);
     }
-    // IMPORTANT: this must be the last part of the ClassFile size computation, because the previous
+    // RICKYIMPORTANT: this must be the last part of the ClassFile size computation, because the previous
     // statements can add attribute names to the constant pool, thereby changing its size!
     size += symbolTable.getConstantPoolLength();
     int constantPoolCount = symbolTable.getConstantPoolCount();

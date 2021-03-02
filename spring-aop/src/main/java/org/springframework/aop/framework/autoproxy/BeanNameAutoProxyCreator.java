@@ -63,7 +63,7 @@ public class BeanNameAutoProxyCreator extends AbstractAutoProxyCreator {
 	 * Spring 1.2's default behavior), specify the bean name of the FactoryBean
 	 * including the factory-bean prefix "&": e.g. "&myFactoryBean".
 	 * @see org.springframework.beans.factory.FactoryBean
-	 * @see org.springframework.beans.factory.BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see org.springframework.beans.factory.BeanFactory#RICKYFACTORY_BEAN_PREFIX
 	 */
 	public void setBeanNames(String... beanNames) {
 		Assert.notEmpty(beanNames, "'beanNames' must not be empty");

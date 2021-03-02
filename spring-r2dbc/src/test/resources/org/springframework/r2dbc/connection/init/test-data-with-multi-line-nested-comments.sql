@@ -17,7 +17,6 @@ be a single-line comment if we weren't
 already inside a multi-line comment run.
 -------------------------------------------*/
  INSERT INTO
-users(first_name, last_name)    -- This is a single line comment containing the block-end-comment sequence here */ but it's still a single-line comment
-VALUES( 'Jesse'     -- first_name
+users(first_name, last_name) VALUES( 'Jesse'     -- first_name
       , 'Pinkman' -- last_name
 );--

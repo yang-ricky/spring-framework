@@ -182,9 +182,7 @@ public class BeanWrapperEnumTests {
 	}
 
 
-	enum NonPublicEnum {
-
-		VALUE_1, VALUE_2;
+	enum NonPublicEnum { VALUE_1, VALUE_2;
 	}
 
 

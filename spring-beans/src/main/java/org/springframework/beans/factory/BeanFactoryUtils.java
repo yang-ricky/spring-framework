@@ -55,7 +55,7 @@ public abstract class BeanFactoryUtils {
 	/**
 	 * Cache from name with factory bean prefix to stripped name without dereference.
 	 * @since 5.1
-	 * @see BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see BeanFactory#RICKYFACTORY_BEAN_PREFIX
 	 */
 	private static final Map<String, String> transformedBeanNameCache = new ConcurrentHashMap<>();
 
@@ -65,7 +65,7 @@ public abstract class BeanFactoryUtils {
 	 * (beginning with the factory dereference prefix).
 	 * @param name the name of the bean
 	 * @return whether the given name is a factory dereference
-	 * @see BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see BeanFactory#RICKYFACTORY_BEAN_PREFIX
 	 */
 	public static boolean isFactoryDereference(@Nullable String name) {
 		return (name != null && name.startsWith(BeanFactory.FACTORY_BEAN_PREFIX));
@@ -76,7 +76,7 @@ public abstract class BeanFactoryUtils {
 	 * prefix (if any, also stripping repeated factory prefixes if found).
 	 * @param name the name of the bean
 	 * @return the transformed name
-	 * @see BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see BeanFactory#RICKYFACTORY_BEAN_PREFIX
 	 */
 	public static String transformedBeanName(String name) {
 		Assert.notNull(name, "'name' must not be null");

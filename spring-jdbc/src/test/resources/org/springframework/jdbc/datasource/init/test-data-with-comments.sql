@@ -10,7 +10,6 @@ insert into orders(id, order_date, customer_id)
 values (1, '2008-01-02', 2);
 insert into orders(id, order_date, customer_id) values (1, '2008-01-02', 2);
 INSERT INTO persons( person_id--      
-                   , name)
-VALUES( 1      -- person_id
+                   , name) VALUES( 1      -- person_id
       , 'Name' --name
 );--

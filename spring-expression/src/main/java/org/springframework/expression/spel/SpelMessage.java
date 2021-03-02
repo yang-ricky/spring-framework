@@ -253,8 +253,7 @@ public enum SpelMessage {
 	EXCEPTION_RUNNING_COMPILED_EXPRESSION(Kind.ERROR, 1072,
 			"An exception occurred whilst evaluating a compiled expression"),
 
-	/** @since 4.3.17 */
-	FLAWED_PATTERN(Kind.ERROR, 1073,
+	/** @since 4.3.17 */ FLAWED_PATTERN(Kind.ERROR, 1073,
 			"Failed to efficiently evaluate pattern ''{0}'': consider redesigning it");
 
 

@@ -34,7 +34,7 @@ public class Spr16179Tests {
 				new AnnotationConfigApplicationContext(AssemblerConfig.class, AssemblerInjection.class);
 
 		assertThat(bf.getBean(AssemblerInjection.class).assembler0).isSameAs(bf.getBean("someAssembler"));
-		// assertNull(bf.getBean(AssemblerInjection.class).assembler1);  TODO: accidental match
+		// assertNull(bf.getBean(AssemblerInjection.class).assembler1);  RICKYTODO: accidental match
 		// assertNull(bf.getBean(AssemblerInjection.class).assembler2);
 		assertThat(bf.getBean(AssemblerInjection.class).assembler3).isSameAs(bf.getBean("pageAssembler"));
 		assertThat(bf.getBean(AssemblerInjection.class).assembler4).isSameAs(bf.getBean("pageAssembler"));

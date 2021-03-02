@@ -110,9 +110,7 @@ enum TokenKind {
 
 	SAFE_NAVI("?."),
 
-	BEAN_REF("@"),
-
-	FACTORY_BEAN_REF("&"),
+	BEAN_REF("@"), FACTORY_BEAN_REF("&"),
 
 	SYMBOLIC_OR("||"),
 

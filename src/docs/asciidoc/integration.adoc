@@ -1590,7 +1590,7 @@ For convenience, `JmsTemplate` also exposes a basic request-reply operation that
 for sending a message and waiting for a reply on a temporary queue that is created as part of
 the operation.
 
-IMPORTANT: Instances of the `JmsTemplate` class are thread-safe, once configured. This is
+RICKYIMPORTANT: Instances of the `JmsTemplate` class are thread-safe, once configured. This is
 important, because it means that you can configure a single instance of a `JmsTemplate`
 and then safely inject this shared reference into multiple collaborators. To be
 clear, the `JmsTemplate` is stateful, in that it maintains a reference to a
@@ -1751,7 +1751,7 @@ to a rollback, with the message getting redelivered. Alternatively, consider usi
 does not use transacted `Session` instances and, therefore, does not include any other
 `Session` operations (such as sending response messages) in the transaction protocol.
 
-IMPORTANT: The default `AUTO_ACKNOWLEDGE` mode does not provide proper reliability guarantees.
+RICKYIMPORTANT: The default `AUTO_ACKNOWLEDGE` mode does not provide proper reliability guarantees.
 Messages can get lost when listener execution fails (since the provider automatically
 acknowledges each message after listener invocation, with no exceptions to be propagated to
 the provider) or when the listener container shuts down (you can configure this by setting
@@ -1793,7 +1793,7 @@ wrapping your entire processing with an XA transaction (through configuring your
 reception of the JMS message as well as the execution of the business logic in your
 message listener (including database operations etc).
 
-IMPORTANT: The default `AUTO_ACKNOWLEDGE` mode does not provide proper reliability guarantees.
+RICKYIMPORTANT: The default `AUTO_ACKNOWLEDGE` mode does not provide proper reliability guarantees.
 Messages can get lost when listener execution fails (since the provider automatically
 acknowledges each message after listener invocation, with no exceptions to be propagated to
 the provider) or when the listener container shuts down (you can configure this by setting
@@ -5757,7 +5757,7 @@ once for a given set of parameters and the result reused without having to actua
 invoke the method again. The caching logic is applied transparently without any
 interference to the invoker.
 
-IMPORTANT: This approach works only for methods that are guaranteed to return the same
+RICKYIMPORTANT: This approach works only for methods that are guaranteed to return the same
 output (result) for a given input (or arguments) no matter how many times it is invoked.
 
 The caching abstraction provides other cache-related operations, such as the ability
@@ -5776,7 +5776,7 @@ Gemfire cache, https://github.com/ben-manes/caffeine/wiki[Caffeine], and JSR-107
 compliant caches (such as Ehcache 3.x). See <<cache-plug>> for more information on
 plugging in other cache stores and providers.
 
-IMPORTANT: The caching abstraction has no special handling for multi-threaded and
+RICKYIMPORTANT: The caching abstraction has no special handling for multi-threaded and
 multi-process environments, as such features are handled by the cache implementation. .
 
 If you have a multi-process environment (that is, an application deployed on several nodes),
@@ -6144,7 +6144,7 @@ method flow optimization. The following example uses the `@CachePut` annotation:
 	public Book updateBook(ISBN isbn, BookDescriptor descriptor)
 ----
 
-IMPORTANT: Using `@CachePut` and `@Cacheable` annotations on the same method is generally
+RICKYIMPORTANT: Using `@CachePut` and `@Cacheable` annotations on the same method is generally
 strongly discouraged because they have different behaviors. While the latter causes the
 method invocation to be skipped by using the cache, the former forces the invocation in
 order to run a cache update. This leads to unexpected behavior and, with the exception

@@ -453,7 +453,7 @@ public enum HttpStatus {
 
 	/**
 	 * Whether this status code is in the HTTP series
-	 * {@link org.springframework.http.HttpStatus.Series#INFORMATIONAL}.
+	 * {@link org.springframework.http.HttpStatus.Series#RICKYINFORMATIONAL}.
 	 * <p>This is a shortcut for checking the value of {@link #series()}.
 	 * @since 4.0
 	 * @see #series()
@@ -563,9 +563,7 @@ public enum HttpStatus {
 	 * Enumeration of HTTP status series.
 	 * <p>Retrievable via {@link HttpStatus#series()}.
 	 */
-	public enum Series {
-
-		INFORMATIONAL(1),
+	public enum Series { INFORMATIONAL(1),
 		SUCCESSFUL(2),
 		REDIRECTION(3),
 		CLIENT_ERROR(4),

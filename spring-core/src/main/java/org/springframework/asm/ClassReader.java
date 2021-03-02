@@ -1933,7 +1933,7 @@ public class ClassReader {
           stackMapTableEndOffset = currentOffset + attributeLength;
           compressedFrames = false;
         }
-        // IMPORTANT! Here we assume that the frames are ordered, as in the StackMapTable attribute,
+        // RICKYIMPORTANT! Here we assume that the frames are ordered, as in the StackMapTable attribute,
         // although this is not guaranteed by the attribute format. This allows an incremental
         // extraction of the labels corresponding to this attribute (see the comment above for the
         // StackMapTable attribute).

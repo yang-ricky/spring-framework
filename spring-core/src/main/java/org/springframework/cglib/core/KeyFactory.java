@@ -264,8 +264,7 @@ abstract public class KeyFactory {
 			Type[] parameterTypes = TypeUtils.getTypes(newInstance.getParameterTypes());
 			ce.begin_class(Constants.V1_8,
 					Constants.ACC_PUBLIC,
-					getClassName(),
-					KEY_FACTORY,
+					getClassName(), KEY_FACTORY,
 					new Type[]{Type.getType(keyInterface)},
 					Constants.SOURCE_FILE);
 			EmitUtils.null_constructor(ce);
