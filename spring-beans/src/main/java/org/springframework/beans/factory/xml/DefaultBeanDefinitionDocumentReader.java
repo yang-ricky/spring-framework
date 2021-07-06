@@ -90,9 +90,11 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	 * <p>Opens a DOM Document; then initializes the default settings
 	 * specified at the {@code <beans/>} level; then parses the contained bean definitions.
 	 */
+	//KEY: DefaultBeanDefinitionDocumentReader -> registerBeanDefinitions
 	@Override
 	public void registerBeanDefinitions(Document doc, XmlReaderContext readerContext) {
 		this.readerContext = readerContext;
+		// 从XML根节点开始解析文件
 		doRegisterBeanDefinitions(doc.getDocumentElement());
 	}
 
