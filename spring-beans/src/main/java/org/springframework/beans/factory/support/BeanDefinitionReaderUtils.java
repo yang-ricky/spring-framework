@@ -155,6 +155,7 @@ public abstract class BeanDefinitionReaderUtils {
 	 * @param registry the bean factory to register with
 	 * @throws BeanDefinitionStoreException if registration failed
 	 */
+	//KEY: BeanDefinitionReaderUtils -> registerBeanDefinition
 	public static void registerBeanDefinition(
 			BeanDefinitionHolder definitionHolder, BeanDefinitionRegistry registry)
 			throws BeanDefinitionStoreException {
@@ -165,6 +166,7 @@ public abstract class BeanDefinitionReaderUtils {
 
 		// Register aliases for bean name, if any.
 		String[] aliases = definitionHolder.getAliases();
+		// 根据别名重新注册一遍
 		if (aliases != null) {
 			for (String alias : aliases) {
 				registry.registerAlias(beanName, alias);
