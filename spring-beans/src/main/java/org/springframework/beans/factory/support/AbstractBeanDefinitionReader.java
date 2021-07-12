@@ -181,7 +181,7 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
 
 
 	@Override
-	//KEY: AbstractBeanDefinitionReader -> loadBeanDefinitions
+	//KEY: IOC4.3.2.1 - AbstractBeanDefinitionReader -> loadBeanDefinitions
 	public int loadBeanDefinitions(Resource... resources) throws BeanDefinitionStoreException {
 		Assert.notNull(resources, "Resource array must not be null");
 		int count = 0;

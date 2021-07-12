@@ -546,7 +546,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		return this.applicationListeners;
 	}
 
-	//KEY: Refresh
+	//KEY: IOC1 - AbstractApplicationContext -> Refresh
 	@Override // 之所以不叫init的原因是，这个refresh可以调用很多次
 	public void refresh() throws BeansException, IllegalStateException {
 		// 这里是同步操作, 重置Application的操作是互斥的，用synchronized也说明这是互斥的最标准用法
@@ -641,6 +641,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * Prepare this context for refreshing, setting its startup date and
 	 * active flag as well as performing any initialization of property sources.
 	 */
+	//KEY: IOC3 - AbstractApplicationContext -> prepareRefresh
 	protected void prepareRefresh() {
 		// Switch to active.
 		// 需要留下启动时间
@@ -695,6 +696,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * @see #refreshBeanFactory()
 	 * @see #getBeanFactory()
 	 */
+	//KEY: IOC4 - AbstractApplicationContext -> ConfigurableListableBeanFactory
 	protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
 		refreshBeanFactory();
 		return getBeanFactory();
@@ -922,7 +924,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * Finish the initialization of this context's bean factory,
 	 * initializing all remaining singleton beans.
 	 */
-	// KEY: AbstractApplicationContext -> finishBeanFactoryInitialization
+	//KEY: IOC2 - AbstractApplicationContext -> finishBeanFactoryInitialization
 	protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory beanFactory) {
 		// Initialize conversion service for this context.
 		if (beanFactory.containsBean(CONVERSION_SERVICE_BEAN_NAME) &&

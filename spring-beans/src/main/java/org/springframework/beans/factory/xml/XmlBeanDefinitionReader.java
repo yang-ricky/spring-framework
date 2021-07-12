@@ -317,7 +317,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * @return the number of bean definitions found
 	 * @throws BeanDefinitionStoreException in case of loading or parsing errors
 	 */
-	//KEY: XmlBeanDefinitionReader -> loadBeanDefinitions 
+	//KEY: IOC4.3.2.1.1 - XmlBeanDefinitionReader -> loadBeanDefinitions
 	public int loadBeanDefinitions(EncodedResource encodedResource) throws BeanDefinitionStoreException {
 		Assert.notNull(encodedResource, "EncodedResource must not be null");
 		if (logger.isTraceEnabled()) {
@@ -385,7 +385,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * @see #doLoadDocument
 	 * @see #registerBeanDefinitions
 	 */
-	//KEY: XmlBeanDefinitionReader -> doLoadBeanDefinitions
+	//KEY: IOC4.3.2.1.2 - XmlBeanDefinitionReader -> doLoadBeanDefinitions
 	protected int doLoadBeanDefinitions(InputSource inputSource, Resource resource)
 			throws BeanDefinitionStoreException {
 
@@ -509,7 +509,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * @see #setDocumentReaderClass
 	 * @see BeanDefinitionDocumentReader#registerBeanDefinitions
 	 */
-	//KEY XmlBeanDefinitionReader -> registerBeanDefinitions 从当前配置文件里加载了多少个Bean?
+	//KEY: IOC4.3.2.1.3 XmlBeanDefinitionReader -> registerBeanDefinitions 从当前配置文件里加载了多少个Bean?
 	public int registerBeanDefinitions(Document doc, Resource resource) throws BeanDefinitionStoreException {
 		BeanDefinitionDocumentReader documentReader = createBeanDefinitionDocumentReader();
 		int countBefore = getRegistry().getBeanDefinitionCount();

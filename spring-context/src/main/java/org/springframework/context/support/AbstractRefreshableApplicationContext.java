@@ -117,7 +117,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * bean factory, shutting down the previous bean factory (if any) and
 	 * initializing a fresh bean factory for the next phase of the context's lifecycle.
 	 */
-	//KEY: refreshBeanFactory
+	//KEY: IOC4.1 - AbstractRefreshableApplicationContext -> refreshBeanFactory
 	@Override
 	protected final void refreshBeanFactory() throws BeansException {
 		// 如果有就销毁，也就是要重新开始
@@ -214,6 +214,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * @see DefaultListableBeanFactory#setAllowRawInjectionDespiteWrapping
 	 * @see DefaultListableBeanFactory#setAllowEagerClassLoading
 	 */
+	//KEY: IOC4.2 - AbstractRefreshableApplicationContext -> customizeBeanFactory
 	protected void customizeBeanFactory(DefaultListableBeanFactory beanFactory) {
 		// Spring默认不同的文件是可以覆盖的
 		if (this.allowBeanDefinitionOverriding != null) {
@@ -234,6 +235,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * @see org.springframework.beans.factory.support.PropertiesBeanDefinitionReader
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
+	//KEY: IOC4.3 - AbstractRefreshableApplicationContext -> loadBeanDefinitions
 	protected abstract void loadBeanDefinitions(DefaultListableBeanFactory beanFactory)
 			throws BeansException, IOException;
 
