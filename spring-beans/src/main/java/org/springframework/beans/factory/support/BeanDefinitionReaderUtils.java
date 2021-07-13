@@ -155,7 +155,7 @@ public abstract class BeanDefinitionReaderUtils {
 	 * @param registry the bean factory to register with
 	 * @throws BeanDefinitionStoreException if registration failed
 	 */
-	//KEY: BeanDefinitionReaderUtils -> registerBeanDefinition
+	//KEY: IOC4.3.2.1.3.4.2 BeanDefinitionReaderUtils -> registerBeanDefinition
 	public static void registerBeanDefinition(
 			BeanDefinitionHolder definitionHolder, BeanDefinitionRegistry registry)
 			throws BeanDefinitionStoreException {

@@ -509,7 +509,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * @see #setDocumentReaderClass
 	 * @see BeanDefinitionDocumentReader#registerBeanDefinitions
 	 */
-	//KEY: IOC4.3.2.1.3 XmlBeanDefinitionReader -> registerBeanDefinitions 从当前配置文件里加载了多少个Bean?
+	//KEY: IOC4.3.2.1.3 - XmlBeanDefinitionReader -> registerBeanDefinitions 从当前配置文件里加载了多少个Bean?
 	public int registerBeanDefinitions(Document doc, Resource resource) throws BeanDefinitionStoreException {
 		BeanDefinitionDocumentReader documentReader = createBeanDefinitionDocumentReader();
 		int countBefore = getRegistry().getBeanDefinitionCount();

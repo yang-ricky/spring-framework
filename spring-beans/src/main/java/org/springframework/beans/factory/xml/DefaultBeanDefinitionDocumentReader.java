@@ -90,7 +90,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	 * <p>Opens a DOM Document; then initializes the default settings
 	 * specified at the {@code <beans/>} level; then parses the contained bean definitions.
 	 */
-	//KEY: DefaultBeanDefinitionDocumentReader -> registerBeanDefinitions
+	//KEY: IOC4.3.2.1.3.1 - DefaultBeanDefinitionDocumentReader -> registerBeanDefinitions
 	@Override
 	public void registerBeanDefinitions(Document doc, XmlReaderContext readerContext) {
 		this.readerContext = readerContext;
@@ -115,7 +115,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 		return getReaderContext().extractSource(ele);
 	}
 
-  //KEY: DefaultBeanDefinitionDocumentReader -> doRegisterBeanDefinitions
+  //KEY: IOC4.3.2.1.3.2 - DefaultBeanDefinitionDocumentReader -> doRegisterBeanDefinitions
 	/**
 	 * Register each bean definition within the given root {@code <beans/>} element.
 	 */
@@ -170,7 +170,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	 * "import", "alias", "bean".
 	 * @param root the DOM root element of the document
 	 */
-	//KEY: DefaultBeanDefinitionDocumentReader -> parseBeanDefinitions
+	//KEY: IOC4.3.2.1.3.3 - DefaultBeanDefinitionDocumentReader -> parseBeanDefinitions
 	protected void parseBeanDefinitions(Element root, BeanDefinitionParserDelegate delegate) {
 		// 处理了import, alias, bean, beans标签
 		// 区分了默认和非默认的命名空间
@@ -195,7 +195,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 		}
 	}
 
-	//KEY: DefaultBeanDefinitionDocumentReader -> parseDefaultElement
+	//KEY: IOC4.3.2.1.3.5 - DefaultBeanDefinitionDocumentReader -> parseDefaultElement
 	private void parseDefaultElement(Element ele, BeanDefinitionParserDelegate delegate) {
 		if (delegate.nodeNameEquals(ele, IMPORT_ELEMENT)) {
 			importBeanDefinitionResource(ele);
@@ -312,7 +312,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	 * Process the given bean element, parsing the bean definition
 	 * and registering it with the registry.
 	 */
-	//KEY: DefaultBeanDefinitionDocumentReader -> processBeanDefinition
+	//KEY: IOC4.3.2.1.3.4 - DefaultBeanDefinitionDocumentReader -> processBeanDefinition
 	protected void processBeanDefinition(Element ele, BeanDefinitionParserDelegate delegate) {
 		BeanDefinitionHolder bdHolder = delegate.parseBeanDefinitionElement(ele);
 		if (bdHolder != null) {

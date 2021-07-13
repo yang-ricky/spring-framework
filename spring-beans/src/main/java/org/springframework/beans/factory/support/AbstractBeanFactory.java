@@ -227,13 +227,14 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * @return an instance of the bean
 	 * @throws BeansException if the bean could not be created
 	 */
+	//KEY: IOC2.1.1 AbstractBeanFactory -> getBean
 	public <T> T getBean(String name, @Nullable Class<T> requiredType, @Nullable Object... args)
 			throws BeansException {
 
 		return doGetBean(name, requiredType, args, false);
 	}
 
-	//KEY: AbstractBeanFactory -> doGetBean
+	//KEY: IOC2.1.2 AbstractBeanFactory -> doGetBean
 	/**
 	 * Return an instance, which may be shared or independent, of the specified bean.
 	 * @param name the name of the bean to retrieve
@@ -2025,6 +2026,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * @return a new instance of the bean
 	 * @throws BeanCreationException if the bean could not be created
 	 */
+	//KEY: IOC2.1.3-AbstractBeanFactory -> createBean
 	protected abstract Object createBean(String beanName, RootBeanDefinition mbd, @Nullable Object[] args)
 			throws BeanCreationException;
 

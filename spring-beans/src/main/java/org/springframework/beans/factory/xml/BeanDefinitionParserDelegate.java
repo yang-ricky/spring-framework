@@ -410,7 +410,7 @@ public class BeanDefinitionParserDelegate {
 	 * if there were errors during parse. Errors are reported to the
 	 * {@link org.springframework.beans.factory.parsing.ProblemReporter}.
 	 */
-	//KEY: BeanDefinitionParserDelegate -> parseBeanDefinitionElement
+	//KEY: IOC4.3.2.1.3.4.1 BeanDefinitionParserDelegate -> parseBeanDefinitionElement
 	@Nullable
 	public BeanDefinitionHolder parseBeanDefinitionElement(Element ele, @Nullable BeanDefinition containingBean) {
 		String id = ele.getAttribute(ID_ATTRIBUTE);

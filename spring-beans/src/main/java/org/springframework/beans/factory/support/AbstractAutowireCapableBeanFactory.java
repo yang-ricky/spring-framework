@@ -488,7 +488,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * populates the bean instance, applies post-processors, etc.
 	 * @see #doCreateBean
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> createBean
+	//KEY: IOC2.1.3.1 - AbstractAutowireCapableBeanFactory -> createBean
 	@Override
 	protected Object createBean(String beanName, RootBeanDefinition mbd, @Nullable Object[] args)
 			throws BeanCreationException {
@@ -564,7 +564,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @see #instantiateUsingFactoryMethod
 	 * @see #autowireConstructor
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> doCreateBean
+	//KEY: IOC2.1.3.2 - AbstractAutowireCapableBeanFactory -> doCreateBean
 	protected Object doCreateBean(String beanName, RootBeanDefinition mbd, @Nullable Object[] args)
 			throws BeanCreationException {
 
@@ -1171,7 +1171,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @see #autowireConstructor
 	 * @see #instantiateBean
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> createBeanInstance
+	//KEY: IOC2.1.3.3 -AbstractAutowireCapableBeanFactory -> createBeanInstance
 	protected BeanWrapper createBeanInstance(String beanName, RootBeanDefinition mbd, @Nullable Object[] args) {
 		// Make sure bean class is actually resolved at this point.
 		// 确保在这个地方class已经加载了
@@ -1319,7 +1319,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @param mbd the bean definition for the bean
 	 * @return a BeanWrapper for the new instance
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> instantiateBean
+	//KEY: IOC2.1.3.4 - AbstractAutowireCapableBeanFactory -> instantiateBean
 	protected BeanWrapper instantiateBean(String beanName, RootBeanDefinition mbd) {
 		try {
 			Object beanInstance;
@@ -1386,7 +1386,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @param mbd the bean definition for the bean
 	 * @param bw the BeanWrapper with bean instance
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> populateBean
+	//KEY: IOC2.1.3.5 - AbstractAutowireCapableBeanFactory -> populateBean
 	@SuppressWarnings("deprecation")  // for postProcessPropertyValues
 	protected void populateBean(String beanName, RootBeanDefinition mbd, @Nullable BeanWrapper bw) {
 		if (bw == null) {
@@ -1791,7 +1791,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @see #invokeInitMethods
 	 * @see #applyBeanPostProcessorsAfterInitialization
 	 */
-	//KEY: AbstractAutowireCapableBeanFactory -> initializeBean
+	//KEY: IOC2.1.3.7 - AbstractAutowireCapableBeanFactory -> initializeBean
 	protected Object initializeBean(String beanName, Object bean, @Nullable RootBeanDefinition mbd) {
 		if (System.getSecurityManager() != null) {
 			AccessController.doPrivileged((PrivilegedAction<Object>) () -> {

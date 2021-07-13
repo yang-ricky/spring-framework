@@ -907,7 +907,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		return (this.configurationFrozen || super.isBeanEligibleForMetadataCaching(beanName));
 	}
 
-	//KEY: DefaultListableBeanFactory -> preInstantiateSingletons
+	//KEY: IOC2.1 -  DefaultListableBeanFactory -> preInstantiateSingletons
 	@Override
 	public void preInstantiateSingletons() throws BeansException {
 		if (logger.isTraceEnabled()) {
@@ -981,7 +981,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	//---------------------------------------------------------------------
 	// Implementation of BeanDefinitionRegistry interface
 	//---------------------------------------------------------------------
-  //KEY: DefaultListableBeanFactory -> registerBeanDefinition
+  //KEY: IOC4.3.2.1.3.4.2.1 DefaultListableBeanFactory -> registerBeanDefinition
 	@Override
 	public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
 			throws BeanDefinitionStoreException {
