@@ -41,3 +41,16 @@ dependencies {
 	testRuntime("org.apache.johnzon:johnzon-jsonb")
 	testRuntime(project(":spring-context"))
 }
+
+test {
+	filter {
+		excludeTestsMatching "org.springframework.messaging.converter.*"
+		excludeTestsMatching "org.springframework.messaging.handler.*"
+		excludeTestsMatching "org.springframework.messaging.protobuf.*"
+		excludeTestsMatching "org.springframework.messaging.rsocket.*"
+		excludeTestsMatching "org.springframework.messaging.simp.*"
+		excludeTestsMatching "org.springframework.messaging.support.*"
+		excludeTestsMatching "org.springframework.messaging.MessageHeadersTests"
+		excludeTestsMatching "org.springframework.messaging.StubMessageChannel"
+	}
+}

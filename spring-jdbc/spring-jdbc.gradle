@@ -17,3 +17,12 @@ dependencies {
 	testCompile(testFixtures(project(":spring-beans")))
 	testCompile(testFixtures(project(":spring-core")))
 }
+
+test {
+	filter {
+		excludeTestsMatching "org.springframework.jdbc.core.*"
+		excludeTestsMatching "org.springframework.jdbc.datasource.*"
+		excludeTestsMatching "org.springframework.jdbc.object.*"
+		excludeTestsMatching "org.springframework.jdbc.support.*"
+	}
+}

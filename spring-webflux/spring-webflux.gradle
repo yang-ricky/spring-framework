@@ -60,4 +60,17 @@ dependencies {
 
 test {
 	maxParallelForks = 4
+    // Ricky备注: 排除一些单元测试，因为耗时很长
+	filter {
+		excludeTestsMatching "org.springframework.web.reactive.config.*"
+		excludeTestsMatching "org.springframework.web.reactive.function.*"
+		excludeTestsMatching "org.springframework.web.reactive.handler.*"
+		excludeTestsMatching "org.springframework.web.reactive.protobuf.*"
+		excludeTestsMatching "org.springframework.web.reactive.resource.*"
+		excludeTestsMatching "org.springframework.web.reactive.result.*"
+		excludeTestsMatching "org.springframework.web.reactive.socket.*"
+		excludeTestsMatching "org.springframework.web.reactive.DispatcherHandlerErrorTests"
+		excludeTestsMatching "org.springframework.web.reactive.DispatcherHandlerTests"
+		excludeTestsMatching "org.springframework.web.reactive.FlushingIntegrationTests"
+	}
 }

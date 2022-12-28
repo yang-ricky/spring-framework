@@ -13,7 +13,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '5.7.0'
     compile(project(":spring-context"))
     testCompile(testFixtures(project(":spring-context")))
 }

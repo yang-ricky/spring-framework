@@ -90,3 +90,12 @@ dependencies {
 		because("needed by Netty's SelfSignedCertificate on JDK 15+")
 	}
 }
+
+test {
+	filter {
+		excludeTestsMatching "org.springframework.http.*"
+		excludeTestsMatching "org.springframework.protobuf.*"
+		excludeTestsMatching "org.springframework.remoting.*"
+		excludeTestsMatching "org.springframework.web.*"
+	}
+}

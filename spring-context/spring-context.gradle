@@ -47,3 +47,24 @@ dependencies {
 	testFixturesImplementation("com.google.code.findbugs:jsr305")
 	testFixturesImplementation("org.assertj:assertj-core")
 }
+test {
+	filter {
+		excludeTestsMatching "example.*"
+		excludeTestsMatching "test.*"
+		excludeTestsMatching "org.springframework.aop.*"
+		excludeTestsMatching "org.springframework.beans.factory.*"
+		excludeTestsMatching "org.springframework.cache.*"
+		excludeTestsMatching "org.springframework.context.*"
+		excludeTestsMatching "org.springframework.core.task.*"
+		excludeTestsMatching "org.springframework.ejb.*"
+		excludeTestsMatching "org.springframework.format.*"
+		excludeTestsMatching "org.springframework.instrument.classloading.*"
+		excludeTestsMatching "org.springframework.jmx.*"
+		excludeTestsMatching "org.springframework.jndi.*"
+		excludeTestsMatching "org.springframework.mock.env.*"
+		excludeTestsMatching "org.springframework.remoting.*"
+		excludeTestsMatching "org.springframework.scheduling.*"
+		excludeTestsMatching "org.springframework.scripting.*"
+		excludeTestsMatching "org.springframework.tests.sample.beans.*"
+	}
+}

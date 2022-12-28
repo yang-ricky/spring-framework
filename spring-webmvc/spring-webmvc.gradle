@@ -72,3 +72,11 @@ dependencies {
 	testRuntime("com.sun.xml.bind:jaxb-impl")
 	testRuntime("com.sun.activation:javax.activation")
 }
+
+
+test {
+	filter {
+		excludeTestsMatching "org.springframework.web.context.*"
+		excludeTestsMatching "org.springframework.web.servlet.*"
+	}
+}
