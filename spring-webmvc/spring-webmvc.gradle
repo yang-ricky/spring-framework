@@ -76,7 +76,6 @@ dependencies {
 
 test {
 	filter {
-		excludeTestsMatching "org.springframework.web.context.*"
-		excludeTestsMatching "org.springframework.web.servlet.*"
+		includeTestsMatching "org.springframework.web.util.*"
 	}
 }

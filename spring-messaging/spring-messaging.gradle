@@ -44,13 +44,7 @@ dependencies {
 
 test {
 	filter {
-		excludeTestsMatching "org.springframework.messaging.converter.*"
-		excludeTestsMatching "org.springframework.messaging.handler.*"
-		excludeTestsMatching "org.springframework.messaging.protobuf.*"
-		excludeTestsMatching "org.springframework.messaging.rsocket.*"
-		excludeTestsMatching "org.springframework.messaging.simp.*"
-		excludeTestsMatching "org.springframework.messaging.support.*"
-		excludeTestsMatching "org.springframework.messaging.MessageHeadersTests"
-		excludeTestsMatching "org.springframework.messaging.StubMessageChannel"
+		// 为了让项目整体编译的更快，暂时只跑部分单元测试
+		includeTestsMatching "org.springframework.messaging.core.*"
 	}
 }
