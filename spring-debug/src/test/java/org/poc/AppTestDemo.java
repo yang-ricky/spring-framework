@@ -13,9 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework;
+package org.poc;
 
-public class AppTestDemo {
-	public void testAppHasAGreeting() {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.poc.Config;
+import org.poc.entity.ErrorMsg;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+class AppTestDemo {
+	@Test
+	void testAnnotationConfigApplicationContext() {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ErrorMsg.class);
+		ctx.close();
+		Assertions.assertNotNull(ctx);
 	}
 }

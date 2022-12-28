@@ -16,7 +16,6 @@
 
 package org.poc;
 
-
 final class App {
 	private App() {
 		throw new IllegalStateException("Utility class");
