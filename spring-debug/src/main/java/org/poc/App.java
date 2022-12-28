@@ -13,7 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework;
 
-public class TestService {
+package org.poc;
+
+
+final class App {
+	private App() {
+		throw new IllegalStateException("Utility class");
+	}
+
+	public static void main(String[] args) {
+		System.out.println("new App().getGreeting()");
+	}
 }

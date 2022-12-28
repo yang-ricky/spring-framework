@@ -27,3 +27,9 @@ dependencies {
 	testCompile("org.apache.tomcat.embed:tomcat-embed-websocket")
 	testCompile("io.projectreactor.netty:reactor-netty-http")
 }
+
+test {
+	filter {
+		includeTestsMatching "org.springframework.web.socket.adapter.jetty.JettyWebSocketHandlerAdapterTests"
+	}
+}
