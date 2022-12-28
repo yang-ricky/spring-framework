@@ -40,6 +40,7 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 3.0
  */
+
 public class CompositeStringExpression implements Expression {
 
 	private final String expressionString;
