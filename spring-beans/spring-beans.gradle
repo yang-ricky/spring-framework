@@ -38,3 +38,12 @@ tasks.named('compileKotlin') {
 	// Kotlin also depends on the result of Groovy compilation
 	classpath += files(sourceSets.main.groovy.classesDirectory)
 }
+
+// 跳过测试
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+	}
+}

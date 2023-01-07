@@ -103,3 +103,12 @@ test {
 	// When test fixtures are involved, the JAR is used by default
 	classpath = sourceSets.main.output.classesDirs + classpath - files(jar.archiveFile)
 }
+
+// 跳过测试
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+	}
+}

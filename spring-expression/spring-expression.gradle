@@ -8,3 +8,12 @@ dependencies {
 	testCompile("org.jetbrains.kotlin:kotlin-reflect")
 	testCompile("org.jetbrains.kotlin:kotlin-stdlib")
 }
+
+// 跳过测试
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+	}
+}

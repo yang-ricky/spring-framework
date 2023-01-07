@@ -1,6 +1,7 @@
 package org.poc.config;
 
 import org.poc.entity.ErrorMsg;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

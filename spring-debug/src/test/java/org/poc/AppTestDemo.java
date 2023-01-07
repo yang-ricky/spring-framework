@@ -15,13 +15,12 @@
  */
 package org.poc;
 
+import org.poc.config.Config;
+import org.poc.entity.ErrorMsg;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import org.poc.config.Config;
-import org.poc.entity.ErrorMsg;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -37,7 +36,6 @@ class AppTestDemo {
 	void test_scan() {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 		ErrorMsg msg = ctx.getBean(ErrorMsg.class);
-		System.out.println(msg.message);
 		Assertions.assertNotNull(msg);
 	}
 }
