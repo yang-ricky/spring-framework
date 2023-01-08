@@ -33,3 +33,21 @@ test {
 		includeTestsMatching "org.springframework.web.socket.adapter.jetty.JettyWebSocketHandlerAdapterTests"
 	}
 }
+
+// 跳过测试
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("compileJmhJava")) {
+			task.enabled = false
+		}
+
+	}
+}

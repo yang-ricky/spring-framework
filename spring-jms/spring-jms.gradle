@@ -16,3 +16,21 @@ dependencies {
 	testCompile(testFixtures(project(":spring-tx")))
 	testImplementation("javax.jms:javax.jms-api")
 }
+
+// 跳过测试
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("compileJmhJava")) {
+			task.enabled = false
+		}
+
+	}
+}

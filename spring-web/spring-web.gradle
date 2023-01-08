@@ -108,5 +108,10 @@ gradle.taskGraph.whenReady {
 		if (task.name.contains("Test")) {
 			task.enabled = false
 		}
+
+		if (task.name.contains("compileJmhJava")) {
+			task.enabled = false
+		}
+
 	}
 }
