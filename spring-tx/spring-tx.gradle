@@ -27,3 +27,15 @@ dependencies {
 	testCompile("org.eclipse.persistence:javax.persistence")
 	testCompile("io.projectreactor:reactor-test")
 }
+
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+	}
+}

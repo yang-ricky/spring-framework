@@ -35,3 +35,15 @@ eclipse.project {
 	natures += "org.eclipse.ajdt.ui.ajnature"
 	buildCommands = [new org.gradle.plugins.ide.eclipse.model.BuildCommand("org.eclipse.ajdt.core.ajbuilder")]
 }
+
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+	}
+}

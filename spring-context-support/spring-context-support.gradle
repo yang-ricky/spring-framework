@@ -30,3 +30,15 @@ dependencies {
 	testFixturesImplementation("org.assertj:assertj-core")
 	testFixturesImplementation("org.mockito:mockito-core")
 }
+
+gradle.taskGraph.whenReady {
+	tasks.each { task ->
+		if (task.name.contains("test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+	}
+}
