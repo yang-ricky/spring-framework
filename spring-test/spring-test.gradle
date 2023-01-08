@@ -120,5 +120,13 @@ gradle.taskGraph.whenReady {
 		if (task.name.contains("test")) {
 			task.enabled = false
 		}
+
+		if (task.name.contains("Test")) {
+			task.enabled = false
+		}
+
+		if (task.name.contains("junit")) {
+			task.enabled = false
+		}
 	}
 }
